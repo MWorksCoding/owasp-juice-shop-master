@@ -48,12 +48,6 @@ The server returned HTTP 201 and stored the payload verbatim. Navigating to `/#/
 
 ---
 
-## Video
-
-[Watch on Loom](#) [Client-side XSS Protection](https://www.loom.com/share/3f2dea21fc15422c801cfbf4cc8d5e58)
-
----
-
 ## Recommendation
 
 - Validate email field format server-side — reject any value that does not conform to RFC 5322

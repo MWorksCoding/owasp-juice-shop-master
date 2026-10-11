@@ -58,12 +58,6 @@ The server accepted the request and created the account with administrator privi
 
 ---
 
-## Video
-
-[Watch on Loom](#) [Admin Registration](https://www.loom.com/share/22cb45e3031e4165bef256105c175df0)
-
----
-
 ## Recommendation
 
 - Implement an explicit allowlist of accepted fields on the registration endpoint

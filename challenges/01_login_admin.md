@@ -81,12 +81,6 @@ The database evaluates the condition as true for all rows and returns the first 
 
 ---
 
-## Video
-
-[Watch on Loom](#) [Login Admin](https://www.loom.com/share/06c580617fc44d68b21e6dc2255dd3c0)
-
----
-
 ## Recommendation
 
 - Use parameterized queries (prepared statements) for all database interactions — never concatenate user input into SQL strings
