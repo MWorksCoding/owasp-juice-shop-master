@@ -67,12 +67,6 @@ Zooming out revealed the named area: **Daniel Boone National Forest**, Kentucky,
 
 ---
 
-## Video
-
-[Watch on Loom](#) [Meta Geo Stalking ](https://www.loom.com/share/58e902e546c44518a5dfbe812db2da01)
-
----
-
 ## Recommendation
 
 - Strip EXIF metadata from all user-uploaded images server-side before storing or serving them
