@@ -26,6 +26,10 @@ A standard registration request was submitted and the HTTP 201 response revealed
 }
 ```
 
+![Screenshot](../img/02_admin_registration_1.png)
+
+![Screenshot](../img/02_admin_registration_2.png)
+
 The presence of the `role` field in the response indicated it exists on the user model and may be writable via the same endpoint.
 
 ---
@@ -45,7 +49,13 @@ The registration request was intercepted in Burp Suite and `"role": "admin"` was
 }
 ```
 
+![Screenshot](../img/02_admin_registration_3.png)
+
+![Screenshot](../img/02_admin_registration_4.png)
+
 The server accepted the request and created the account with administrator privileges. No prior access was required.
+
+![Screenshot](../img/02_admin_registration_5.png)
 
 ---
 

@@ -20,6 +20,10 @@ Client-side input validation (form field restrictions, format checks) is a UX fe
 
 The registration form validated the email field format client-side and would have rejected an XSS payload through the UI. By intercepting the POST request to `/api/Users/` with Burp Suite, the email value was replaced with an iframe payload before the server received it.
 
+![Screenshot](../img/04_client_side_xss_1.png)
+
+![Screenshot](../img/04_client_side_xss_2.png)
+
 ---
 
 ## Exploit
@@ -35,7 +39,13 @@ The intercepted registration request body was modified:
 }
 ```
 
+![Screenshot](../img/04_client_side_xss_3.png)
+
+![Screenshot](../img/04_client_side_xss_4.png)
+
 The server returned HTTP 201 and stored the payload verbatim. Navigating to `/#/administration` as an admin triggered the JavaScript alert immediately — the payload executed in the admin's browser when the user list was rendered.
+
+![Screenshot](../img/04_client_side_xss_5.png)
 
 ---
 
