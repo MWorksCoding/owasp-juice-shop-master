@@ -22,6 +22,8 @@ A well-known basic test is submitting `OR ""=""` as the username or password. Si
 
 To verify that the login form is vulnerable to SQL Injection, a single quote `'` was submitted as both the email and password value. Burp Suite was used to intercept the POST request and inspect the server response.
 
+![Screenshot](../img/01_login_admin_1.png)
+
 The server returned HTTP 500 with a raw database error in the response body:
 
 ```json
@@ -32,6 +34,8 @@ The server returned HTTP 500 with a raw database error in the response body:
   }
 }
 ```
+
+![Screenshot](../img/01_login_admin_2.png)
 
 This response confirms two things:
 
@@ -63,6 +67,8 @@ This transforms the executed query into:
 SELECT * FROM Users WHERE email = '' OR 1=1 --' AND password = '...' AND deletedAt IS NULL
 ```
 
+![Screenshot](../img/01_login_admin_3.png)
+
 Three things happen:
 
 - The opening `'` closes the string literal, breaking out of the data context
@@ -70,6 +76,10 @@ Three things happen:
 - `--` comments out the rest of the query, including the password and `deletedAt` checks
 
 The database evaluates the condition as true for all rows and returns the first result — the administrator account.
+
+![Screenshot](../img/01_login_admin_4.png)
+
+![Screenshot](../img/01_login_admin_5.png)
 
 ---
 

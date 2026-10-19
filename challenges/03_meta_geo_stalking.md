@@ -30,9 +30,13 @@ Entering the email in the password reset flow revealed the question:
 What's your favorite place to go hiking?
 ```
 
+![Screenshot](../img/03_meta_geo_stalking_1.png)
+
 **Step 3 — Locate the image**
 
 A photo titled "I love going hiking here" by user `j0hNny` was found on the public Photo Wall and downloaded.
+
+![Screenshot](../img/03_meta_geo_stalking_2.png)
 
 **Step 4 — Extract GPS metadata**
 
@@ -40,6 +44,8 @@ A photo titled "I love going hiking here" by user `j0hNny` was found on the publ
 exiftool favorite-hiking-place.png
 # GPS Position: 36 deg 57' 31.38" N, 84 deg 20' 53.58" W
 ```
+
+![Screenshot](../img/03_meta_geo_stalking_3.png)
 
 **Step 5 — Resolve the location**
 
@@ -51,11 +57,19 @@ The coordinates were entered into Google Maps:
 
 Zooming out revealed the named area: **Daniel Boone National Forest**, Kentucky, USA.
 
+![Screenshot](../img/03_meta_geo_stalking_4.png)
+
+![Screenshot](../img/03_meta_geo_stalking_5.png)
+
 ---
 
 ## Exploit
 
 `Daniel Boone National Forest` was submitted as the security question answer. A new password was set and the account was fully taken over — no technical exploitation required.
+
+![Screenshot](../img/03_meta_geo_stalking_6.png)
+
+![Screenshot](../img/03_meta_geo_stalking_7.png)
 
 ---
 
